@@ -1,0 +1,284 @@
+//page dimmensions
+$page-width: 1440px;
+$page-height: 1930px;
+
+//image dimmensions
+$img-height: 1024px;
+$banner-height: 75px;
+$ft-img-width: 117px;
+$ft-img-height: 11px;
+
+//box dimmensions 
+$rectangle-width: 356px;
+$rectangle-height: 306px;
+
+.wrapper {
+    width: 100%;
+    max-width: $page-width;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 3px solid lightslategray;
+    @media screen and (min-width: 320px) and (max-width: 767) {
+        width: 320px;
+        height: 1050px;
+        border: none;
+    }
+    @media screen and (min-width: 768px) and (max-width: 920) {
+        width: 768px;
+        height: 1050px;
+        border: none;
+    }
+}
+
+div {
+    //full pc and laptop screen
+    #imgdiv {
+        width: $page-width;
+        height: $img-height;
+        margin: 0 auto;
+        left: 0px;
+        top: 0px;
+        
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+            width: 320px;
+            //height: 519px;
+            background: linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+            url('../images/mainimg.png');
+            background-position: center;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 920px) {
+            width: 768px;
+            //height: 519px;
+            background: linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
+            url('../images/mainimg.png');
+            background-position: center;
+        }
+        background: linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15)), 
+        url('../images/mainimg.png');
+    }
+
+    #bannerdiv {
+        position: absolute;
+        width: $page-width;
+        height: $banner-height;
+
+        background: rgba(2, 81, 89, 0.6);
+        @media screen and (min-width:320px) and (max-width: 767px) {
+            width: 320px;
+            height: 70px;
+        }
+
+        @media screen and (min-width:768px) and (max-width: 920px) {
+            width: 768px;
+            height: 70px;
+        }
+    }
+
+    #logodiv {
+        width: 253px;
+        height: 66px;
+        left: 588px;
+
+        margin: 0 auto;
+        margin-top: 8px;
+
+        background: url('../images/logopc1.png');
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+            width: 170px;
+            height: 40px;
+            background: url('../images/mobilelogo.png');
+        }
+    }
+
+    #footer {
+        width: $page-width;
+        height: 60px;
+
+        margin-top: 846px;
+
+        background: #c4c4c4;
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+            width: 310px;
+
+            margin-top: 200px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 920px) {
+            width: 768px;
+
+            margin-top: 2200px;
+        }
+    }
+    
+    #footimg {
+        position: absolute;
+        width: $ft-img-width;
+        height: $ft-img-height;
+
+        margin-top: 21px;
+        margin-bottom: 21px;
+        margin-right: 647px;
+        margin-left: 674px;
+
+        background: url('../images/PCFooter.png');
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+            width: 117px;
+            height: 11px;
+            margin-top: 16px;
+            margin-bottom: 26px;
+            margin-right: 100px;
+            margin-left: 100px;
+        }
+        @media screen and (min-width: 768px) and (max-width: 920px) {
+            width: 117px;
+            height: 11px;
+            margin-top: 25px;
+            margin-bottom: 26px;
+            margin-right: 300px;
+            margin-left: 300px;
+        }
+    }
+}
+
+%fontdetails {
+    font-family: Quicksand;
+    font-style: normal; 
+}
+.imgcenter {
+    @extend %fontdetails;
+    position: absolute;
+    width: 619px;
+    height: 349px;
+
+    margin-top: 387px;
+    margin-bottom: 288px;
+    margin-left: 428px;
+    margin-right: 393px;
+
+    font-weight: bold;
+    font-size: 4.5rem;
+    line-height: 90px;
+    color: #ffffff;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        width: 284px;
+        height: 399px;
+        margin: 0 auto;
+        margin-top: 240px;
+        margin-left: 20px;
+        
+        font-size: 3.5rem;
+        line-height: 90px;
+        text-align: center;
+    }
+    @media screen and (min-width: 768px) and (max-width: 920px) {
+        width: 500px;
+        height: 420px;
+        margin: 0 auto;
+        margin-top: 300px;
+        margin-left: 100px;
+        
+        font-size: 3.5rem;
+        line-height: 90px;
+        text-align: center;
+    }
+    
+}
+
+.rectangle {
+    float: left;
+    width: $rectangle-width;
+    height: $rectangle-height;
+    margin: 20px auto;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    background: #ffffff;
+    border: 3px solid #f25d27;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.mobile_rect {
+    float: none;
+    width: 284px;
+    height: 208px;
+    margin-left: 10px;
+    margin-top: 20px;
+
+    background: #ffffff;
+    border: 3px solid #f25d27;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+}
+
+.boxlist {
+    margin: 0 auto;
+    margin-left: 162px;
+    margin-top: 72px;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+ }
+
+.boxnumber {
+    @extend %fontdetails;
+    //position: absolute;
+    width: 59px;
+    height: 68px;
+
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 0px;
+
+    font-weight: bold;
+    font-size: 4.5rem;
+}
+
+.boxtext {
+    @extend %fontdetails;
+    float: left;
+    width: 219px;
+    height: 213px;
+
+    margin-top: 39px;
+    margin-left: 78px;
+    margin-right: 59px;
+    margin-bottom: 54px;
+
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 30px;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        float: none;
+        height: 120px;
+        margin-top: -50px;
+        margin-bottom: 0px;
+        margin-left: 45px;
+        margin-right: 0px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 920px) {
+        float: none;
+        margin-top: -30px;
+        margin-bottom: 0px;
+        margin-left: 80px;
+        margin-right: 0px;
+    }
+}
+
+.nav {
+    @extend %fontdetails;
+    float: left;
+    font-weight: bold;
+    
+    margin-left: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    border: 2px solid #c4c4c4;
+    border-radius: 10px;
+}

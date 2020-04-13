@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<title>Visit Baton Rouge!</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+    <link href="stylesheets/pc_full.css" type="text/css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<script>
+    //Jquery
+    var mobile_box_num = 1;
+    $(document).ready(function () {
+        $(".rectangle").on("click", function () {
+            $(".rectangle").css("border", "3px solid #f25d27");
+            $(this).css("border", "3px solid lightgreen");
+        });
+    });
+    $(document).ready(function () {
+        alert(mobile_box_num);
+        $(".mobile_rect").on("click", function () {
+            $(".mobile_rect").css("border", "3px solid #f25d27");
+            $(this).css("border", "3px solid lightgreen");
+        });
+    });
+    $(document).ready(function () {
+        $(".boxtext").on("click", function () {
+            $(".boxtext").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit,");
+            $(this).text("De finibus bonorum et malorum!");
+        });
+    });
+    $(document).ready(function () {
+        $("#prev").on("click", function () {
+            if (mobile_box_num != 1) {
+                mobile_box_num -= 1;
+                $("#prev").text(mobile_box_num);
+            };
+        });
+    });
+    $(document).ready(function () {
+        $("#next").on("click", function () {
+            if (mobile_box_num != 6) {
+                mobile_box_num += 1;
+                $("#next").text(mobile_box_num);
+            };
+        });
+    });
+    $(document).ready(function() {
+        if ($(window).width() < 920) {
+            $(".boxlist").html("<div class='boxlist' id='rect_list' ><div class='mobile_rect' name='one'><p class='boxnumber'>"+ mobile_box_num +"</p><p class='boxtext'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<p class='nav' id='prev'>Prev</p><p class='nav' id='next'>Next</p></p></div>");
+        };
+    });
+</script>
+
+<body>
+    <div class="wrapper">
+        <div id='bannerdiv'>
+            <div id='logodiv'></div>
+        </div>
+
+        <div id='imgdiv'>
+            <p class='imgcenter'>6 Reasons Why You Should Visit Baton Rouge</p>
+        </div>
+
+        <div class="boxlist" id='rect_list' >
+            <div class='rectangle' name='one'>
+                <p class="boxnumber">1</p>
+                <p class="boxtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                </p>
+            </div>
+            <div class='rectangle' name='two'>
+                <p class="boxnumber">2</p>
+                <p class="boxtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                </p>
+            </div>
+            <div class='rectangle' name='three'>
+                <p class="boxnumber">3</p>
+                <p class="boxtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                </p>
+            </div>
+            <div class='rectangle' name='four'>
+                <p class="boxnumber">4</p>
+                <p class="boxtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                </p>
+            </div>
+            <div class='rectangle' name='five'>
+                <p class="boxnumber">5</p>
+                <p class="boxtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                </p>
+            </div>
+            <div class='rectangle' name='six'>
+                <p class="boxnumber">6</p>
+                <p class="boxtext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                </p>
+            </div>
+        </div>
+        <div id='footer'>
+            <div id='footimg'>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
