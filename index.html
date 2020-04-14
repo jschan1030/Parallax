@@ -2,6 +2,7 @@
 <html lang="en">
 
 <title>Visit Baton Rouge!</title>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,101 +17,126 @@
     //Jquery
     var mobile_box_num = 1;
     $(document).ready(function () {
+        //changes rectangle borders to lightgreen
+        //non mobile
         $(".rectangle").on("click", function () {
             $(".rectangle").css("border", "3px solid #f25d27");
             $(this).css("border", "3px solid lightgreen");
         });
     });
     $(document).ready(function () {
+        //changes rectangle borders to lightgreen
+        //mobile version
         $(".mobile_rect").on("click", function () {
             $(".mobile_rect").css("border", "3px solid #f25d27");
             $(this).css("border", "3px solid lightgreen");
         });
     });
     $(document).ready(function () {
+        //changes text inside rectangles upon click in all versions
         $(".boxtext").on("click", function () {
             $(".boxtext").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit,");
             $(this).text("De finibus bonorum et malorum!");
         });
     });
+
     $(document).ready(function () {
+        //for mobile and tablet, changes configuration of rectangles
+        if ($(window).width() < 920) {
+            $(".menuindex").html("<div class='boxlist' id='rect_list' ><div class='mobile_rect' name='one'><p class='boxnumber'>" + mobile_box_num + "</p><p class='boxtext'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<p class='nav' id='prev'>Prev</p><p class='nav' id='next'>Next</p></p></div>");
+        };
+    });
+    $(document).ready(function () {
+        //for mobile previous button
         $("#prev").on("click", function () {
             if (mobile_box_num != 1) {
                 mobile_box_num -= 1;
-                $("#prev").text(mobile_box_num);
+
             };
+            $(".boxtext").on("click", function () {
+                $(".boxtext").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit,");
+            });
+            $(".boxnumber").text(mobile_box_num);
         });
     });
     $(document).ready(function () {
+        //for mobile next button
         $("#next").on("click", function () {
             if (mobile_box_num != 6) {
                 mobile_box_num += 1;
-                $("#next").text(mobile_box_num);
+
             };
+            $(".boxtext").on("click", function () {
+                $(".boxtext").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit,");
+            });
+            $(".boxnumber").text(mobile_box_num);
+        });
+        
+    });
+
+    $(document).ready(function () {
+        //changes text inside rectangles upon click in all versions
+        $(".boxtext").on("click", function () {
+            $(".boxtext").text("Lorem ipsum dolor sit amet, consectetur adipiscing elit,");
+            $(this).text("De finibus bonorum et malorum!");
         });
     });
-    $(document).ready(function() {
-        if ($(window).width() < 920) {
-            $(".boxlist").html("<div class='boxlist' id='rect_list' ><div class='mobile_rect' name='one'><p class='boxnumber'>"+ mobile_box_num +"</p><p class='boxtext'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,<p class='nav' id='prev'>Prev</p><p class='nav' id='next'>Next</p></p></div>");
-        };
-    });
+
 </script>
 
 <body>
-    <div class="wrapper">
-        <div id='bannerdiv'>
-            <div id='logodiv'></div>
-        </div>
 
-        <div id='imgdiv'>
-            <p class='imgcenter'>6 Reasons Why You Should Visit Baton Rouge</p>
-        </div>
-
-        <div class="boxlist" id='rect_list' >
-            <div class='rectangle' name='one'>
-                <p class="boxnumber">1</p>
-                <p class="boxtext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                </p>
-            </div>
-            <div class='rectangle' name='two'>
-                <p class="boxnumber">2</p>
-                <p class="boxtext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                </p>
-            </div>
-            <div class='rectangle' name='three'>
-                <p class="boxnumber">3</p>
-                <p class="boxtext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                </p>
-            </div>
-            <div class='rectangle' name='four'>
-                <p class="boxnumber">4</p>
-                <p class="boxtext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                </p>
-            </div>
-            <div class='rectangle' name='five'>
-                <p class="boxnumber">5</p>
-                <p class="boxtext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                </p>
-            </div>
-            <div class='rectangle' name='six'>
-                <p class="boxnumber">6</p>
-                <p class="boxtext">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                </p>
+    <div class="parallax">
+        <div id="banner">
+            <div id="bannerImage">
             </div>
         </div>
-        <div id='footer'>
-            <div id='footimg'>
+        <p class="imgCenter">6 Reasons Why You Should Visit Baton Rouge</p>
+    </div>
 
-            </div>
+    <div class="menuindex">
+        <div class='rectangle' name='one'>
+            <p class="boxnumber">1</p>
+            <p class="boxtext">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            </p>
+        </div>
+        <div class='rectangle' name='two'>
+            <p class="boxnumber">2</p>
+            <p class="boxtext">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            </p>
+        </div>
+        <div class='rectangle' name='three'>
+            <p class="boxnumber">3</p>
+            <p class="boxtext">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            </p>
+        </div>
+        <div class='rectangle' name='four'>
+            <p class="boxnumber">4</p>
+            <p class="boxtext">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            </p>
+        </div>
+        <div class='rectangle' name='five'>
+            <p class="boxnumber">5</p>
+            <p class="boxtext">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            </p>
+        </div>
+        <div class='rectangle' name='six'>
+            <p class="boxnumber">6</p>
+            <p class="boxtext">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            </p>
         </div>
 
     </div>
+    <div id="footer">
+        <div id="footerImg"></div>
+    </div>
+
 </body>
 
 </html>
